@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'Template_RN' do
-  # Pods for Template_RN
+target 'EcommerceApp' do
+  # Pods for EcommerceApp
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -36,7 +36,7 @@ target 'Template_RN' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'Template_RNTests' do
+  target 'EcommerceAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -44,10 +44,10 @@ target 'Template_RN' do
   use_native_modules!
 end
 
-target 'Template_RN-tvOS' do
-  # Pods for Template_RN-tvOS
+target 'EcommerceApp-tvOS' do
+  # Pods for EcommerceApp-tvOS
 
-  target 'Template_RN-tvOSTests' do
+  target 'EcommerceApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

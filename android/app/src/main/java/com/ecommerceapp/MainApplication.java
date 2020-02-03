@@ -1,4 +1,4 @@
-package com.template_rn;
+package com.ecommerceapp;
 
 import android.app.Application;
 import android.content.Context;
