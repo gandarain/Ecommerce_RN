@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import {
-  Text,
   View,
-  TouchableOpacity
+  TextInput,
+  TouchableOpacity,
 } from 'react-native'
 import {
   Container,
-  Icon
+  Icon,
+  Content
 } from 'native-base'
+import LinearGradient from 'react-native-linear-gradient'
+
 import { color } from '../../Assets/Style/ColorList'
 
 import { incrementValue, decrementValue } from '../../Redux/Actions'
@@ -22,28 +25,267 @@ class HomeScreen extends Component {
   render() {
     return (
       <Container>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <View style={{ paddingBottom: 10 }}>
-            <Text style={{ color: color.fontColor }}>{this.props.value}</Text>
+        <Content style={{ backgroundColor: color.themaColor }}>
+          <LinearGradient
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            colors={[color.themaColor, color.subThemaColor]}
+            style={{
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50
+            }}>
+            <View style={{
+              paddingHorizontal: 20,
+              paddingVertical: 60,
+              flexDirection: 'row',
+            }}>
+              <View style={{
+                flexDirection: 'row',
+                backgroundColor: color.whiteColor,
+                alignItems: 'center',
+                width: '70%',
+                borderRadius: 10
+              }}>
+                <Icon
+                  type='MaterialCommunityIcons'
+                  name='magnify'
+                  style={{
+                    color: color.themaColor,
+                    paddingHorizontal: 5
+                  }} />
+                <TextInput
+                  placeholder='Cari barang'
+                  style={{
+                    backgroundColor: color.whiteColor,
+                    paddingVertical: 10
+                  }} />
+              </View>
+              <View style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingLeft: 10,
+                width: '30%'
+              }}>
+                <Icon
+                  type='MaterialCommunityIcons'
+                  name='email-outline'
+                  style={{
+                    color: color.whiteColor,
+                    paddingRight: 5
+                  }} />
+                <Icon
+                  type='MaterialCommunityIcons'
+                  name='heart-outline'
+                  style={{
+                    color: color.whiteColor,
+                    paddingRight: 5
+                  }} />
+                <Icon
+                  type='MaterialCommunityIcons'
+                  name='bell-outline'
+                  style={{
+                    color: color.whiteColor,
+                    paddingRight: 5
+                  }} />
+              </View>
+            </View>
+          </LinearGradient>
+          <LinearGradient
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            colors={[color.buttonColor, color.gradientColor1]}
+            style={{
+              paddingVertical: 80,
+              marginHorizontal: 20,
+              borderRadius: 20,
+              top: -40
+            }}>
+          </LinearGradient>
+          <View style={{
+            paddingVertical: 20,
+            paddingHorizontal: 20,
+            flexDirection: 'row'
+          }}>
+            <View style={{ width: '50%' }}>
+              <TouchableOpacity>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={['#654EB6', '#AF47B7']}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10,
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={[color.buttonColor, color.gradientColor1]}
+                  style={{
+                    height: 100,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
+            <View style={{ width: '50%' }}>
+              <TouchableOpacity>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={[color.buttonColor, color.gradientColor1]}
+                  style={{
+                    height: 100,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={['#654EB6', '#AF47B7']}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
           </View>
-          <View style={{ flexDirection: 'row', width: '20%', justifyContent: 'space-between', paddingVertical: 10 }}>
-            <TouchableOpacity
-              onPress={() => this.props.incrementValue()}
-              style={{ backgroundColor: 'blue', borderRadius: 20, padding: 5 }}>
-              <Icon type='MaterialCommunityIcons' name='plus' style={{ color: color.whiteColor }} />
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => this.props.decrementValue()}
-              style={{ backgroundColor: 'red', borderRadius: 20, padding: 5 }}>
-              <Icon type='MaterialCommunityIcons' name='minus' style={{ color: color.whiteColor }} />
-            </TouchableOpacity>
+          <View style={{
+            paddingHorizontal: 20,
+            paddingVertical: 20,
+          }}>
+            <View style={{ width: '100%', flexDirection: 'row' }}>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={['#654EB6', '#AF47B7']}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10,
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={[color.buttonColor, color.gradientColor1]}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
+            <View style={{ width: '100%', flexDirection: 'row' }}>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={['#654EB6', '#AF47B7']}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10,
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={[color.buttonColor, color.gradientColor1]}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
           </View>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Profile')}
-            style={{ backgroundColor: color.buttonColor, paddingVertical: 10, paddingHorizontal: 30, borderRadius: 5 }}>
-            <Text style={{ color: color.whiteColor }}>Profile</Text>
-          </TouchableOpacity>
-        </View>
+          <View style={{
+            paddingHorizontal: 20,
+            paddingVertical: 20,
+          }}>
+            <View style={{ width: '100%', flexDirection: 'row' }}>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={['#654EB6', '#AF47B7']}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10,
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={[color.buttonColor, color.gradientColor1]}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
+            <View style={{ width: '100%', flexDirection: 'row' }}>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={['#654EB6', '#AF47B7']}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10,
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '50%' }}>
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  colors={[color.buttonColor, color.gradientColor1]}
+                  style={{
+                    height: 150,
+                    width: '95%',
+                    borderRadius: 20,
+                    marginBottom: 10
+                  }}>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Content>
       </Container>
     )
   }

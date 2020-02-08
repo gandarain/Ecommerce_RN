@@ -39,9 +39,9 @@ class ProfileScreen extends Component {
             </TouchableOpacity>
           </View>
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Home')}
+            onPress={() => this.props.navigation.navigate('Profile')}
             style={{ backgroundColor: color.buttonColor, paddingVertical: 10, paddingHorizontal: 30, borderRadius: 5 }}>
-            <Text style={{ color: color.whiteColor }}>Home</Text>
+            <Text style={{ color: color.whiteColor }}>Profile</Text>
           </TouchableOpacity>
         </View>
       </Container>
